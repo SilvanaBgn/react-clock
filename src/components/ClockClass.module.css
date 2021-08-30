@@ -1,0 +1,11 @@
+.clockClass {
+  width: 280px;
+  padding: 0 10px;
+}
+
+.pClock {
+  padding: 10px 15px;
+  color: var(--base-color);
+  background-color: var(--white-background);
+  border-radius: 5px;
+}
