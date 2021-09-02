@@ -12,14 +12,14 @@ class ClockClass extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Mounting');
+    console.log('Mounting ClockClass');
     this.timerID = setInterval(() => this.tickClock(),1000);
   }
   componentDidUpdate(){
-    console.log('Clock was updated:',this.state.date);
+    console.log('ClockClass was updated:',this.state.date);
   }
   componentWillUnmount() {
-    console.log('UNMounting');
+    console.log('UNMounting ClockClass');
     clearInterval(this.timerID);
   }
   

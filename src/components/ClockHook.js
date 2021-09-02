@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './ClockHook.module.css';
 
 function ClockHook() {
@@ -7,13 +7,10 @@ function ClockHook() {
 
   let timerID = setInterval(() => tickClock(),1000);
 
-  // componentDidMount() {
-  //   console.log('Mounting');
-  //   this.timerID = setInterval(() => this.tickClock(),1000);
-  // }
-  // componentDidUpdate(){
-  //   console.log('Clock was updated:',this.state.date);
-  // }
+  useEffect(()=>{
+    console.log('ClockHook was updated:', date);
+  });
+
   // componentWillUnmount() {
   //   console.log('UNMounting');
   //   clearInterval(this.timerID);
