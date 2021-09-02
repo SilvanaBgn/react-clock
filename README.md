@@ -2,7 +2,10 @@
 
 This is a React project, created with create-react-app (CRA), that shows 2 clocks: 
 1) One created with a class and using setState(), 
-2) And the other built with hooks (useState and useEffect)
+2) And the other built with hooks (useState and useEffect).
+
+**You can RUN THE PROJECT**: go to this url [https://silvanabgn.github.io/react-clock/](https://silvanabgn.github.io/react-clock/)
+![image](https://user-images.githubusercontent.com/16336861/131852243-7cf5ee23-44a7-454f-b9c1-08687ab4468e.png)
 
 Developed with React v17 (2021).
 
@@ -10,7 +13,7 @@ Developed with React v17 (2021).
 
 I wanted to create a tiny easy static React page, to compare Class lifecycle vs Hooks. So this clock idea was born.
 
-**You can RUN THE PROJECT**: go to this url [https://silvanabgn.github.io/react-clock/](https://silvanabgn.github.io/react-clock/)
+
 
 **My LinkedIn**: https://ar.linkedin.com/in/silvanabelengarcia
 
