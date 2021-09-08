@@ -2,9 +2,9 @@
   display: flex;
   min-width: 300px;
   min-height: 100vh;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   background-color: var(--base-color);
   font-size: calc(10px + 2vmin);
   color: white;
