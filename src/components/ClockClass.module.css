@@ -1,8 +1,12 @@
 .clockClass {
   width: 280px;
+  height: 280px;
   padding: 0 10px;
 }
-
+.pTitle {
+  font-size: 40px;
+  font-weight: bold;
+}
 .pClock {
   padding: 10px 15px;
   color: var(--base-color);

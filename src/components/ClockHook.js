@@ -5,16 +5,30 @@ function ClockHook() {
   // State hook
   const [date, setDate] = useState(new Date().toLocaleTimeString());
 
-  let timerID = setInterval(() => tickClock(),1000);
+  // const timer = useRef();
+  // useEffect(() => {
+  //   timer.current =  setInterval(() => {
+  //     console.log('Setting setInterval');
+  //     tickClock();}, 1000);
+  // }, []);
+  // useEffect(() => {
+  //   return () => {
+  //     console.log('Clearing setInterval');
+  //     clearInterval(timer.current);
+  //   };
+  // }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
+    const timerID = setInterval(() => tickClock(), 1000);
+    return () => {
+      console.log('Clearing setInterval');
+      clearInterval(timerID);
+    }
+  }, []);
+
+  useEffect(() => {
     console.log('ClockHook was updated:', date);
   });
-
-  // componentWillUnmount() {
-  //   console.log('UNMounting');
-  //   clearInterval(this.timerID);
-  // }
   
   function tickClock() {
      setDate(new Date().toLocaleTimeString());
@@ -22,12 +36,11 @@ function ClockHook() {
 
   return (
     <div className={styles.clockHook}>
-      <h1>ClockHook</h1>
-      <p>Hello! I'm a clock implemented with hooks (useState and useEffect).</p>
+      <p className={styles.pTitle}>ClockHook</p>
+      <p>Hello! I'm a clock written with hooks (useState and useEffect).</p>
       <p className={styles.pClock}>{date}</p>
     </div>
   );
 }
-
 
 export default ClockHook;
