@@ -19,7 +19,9 @@ function ClockHook() {
   // }, []);
 
   useEffect(() => {
-    const timerID = setInterval(() => tickClock(), 1000);
+    const timerID = setInterval(() => { 
+      console.log('Set setInterval');
+      tickClock()}, 1000);
     return () => {
       console.log('Clearing setInterval');
       clearInterval(timerID);
@@ -31,8 +33,8 @@ function ClockHook() {
   });
   
   function tickClock() {
-     setDate(new Date().toLocaleTimeString());
-  }
+      setDate(new Date().toLocaleTimeString());
+    }
 
   return (
     <div className={styles.clockHook}>
